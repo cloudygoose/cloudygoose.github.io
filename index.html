@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Tianxing He </title>
+  
+  <meta name="author" content="Tianxing He">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/head_icon_htx.png"> 
+</head>
+
+<body>
+  <table style="width:160%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Tianxing He （贺天行）</name>
+              </p>
+              <p> Hi! I'm currently a postdoc at UW, supervised by Yulia Tsvetkov, who runs the <a href="https://tsvetshop.github.io/#people">Tsvetshop</a>.
+		Not long ago, I was a PhD student at MIT, supervised by Prof. James Glass, who runs the <a href="http://groups.csail.mit.edu/sls/">SLS group</a>. 
+                My research interest lies in natural language processing and deep learning. Most of my works during my PhD is focused on neural language generation.
+              </p>
+              <p>
+              You can download my PhD defense slides <a href="papers/defense.pdf">here</a>.
+              </p>
+              <p>
+                I did my bachelor and master degree at Shanghai Jiao Tong University, and my research there was supervised by Prof. Kai Yu, who runs the <a href="https://speechlab.sjtu.edu.cn/"> SJTU SpeechLab</a>.
+                At SJTU I was in the ACM honored class.
+              </p>
+ 
+              <p>
+              <b> Teaching: </b> My guest lecture slides for UW NLP Course (undergrad/master level), <a href='slides/uw_nlp_undergrad/14-NeuralNetworkLanguageModel.pdf'>Basics on NNLM</a>(Back-propagation, RNN, etc.), and <a href='slides/uw_nlp_undergrad/15_transformer.pdf'>Advanced NNLM</a>(attention, transformers, etc.).
+              </p>
+               
+              <!--
+		<p> 
+		<b> I am actively looking for research mentorship with U.S.-based (especially UW-based) undergrad or master students, </b> who plan to apply for PhD! If you are interested and you can start the internship in March or April 2023, and can potentially work continually for at least 5 months, please shoot me an email with basic info and what you expect from this cooperation. I have mentored outstanding students who end up getting PhD offer from top universities like MIT and CMU. It will be rewarding, but it won't be easy.
+              </p>
+              -->
+
+              <p>
+              My wife and I raise two corgis Minnie&Mickey! We post their photos on <a href="https://www.xiaohongshu.com/user/profile/5f8a3891000000000100b8ca"> RED </a>, and <a href="https://www.instagram.com/minnie_mickey_the_corgis/"> Instagram </a>.
+              </p>
+	      
+              <p>
+               I like to make fun videos with games, two of my favourite (most of them are in Chinese): 
+               (1) <a href="https://www.bilibili.com/video/BV12a411s74o/?vd_source=3de8a9ee6f87d80917a8e6575b3a5f62">MarioKart at MIT</a>.
+               (2) <a href="https://www.bilibili.com/video/BV1J64y147mV/?spm_id_from=333.788.recommend_more_video.1&vd_source=3de8a9ee6f87d80917a8e6575b3a5f62">I built a theme park for proposal</a>.
+              </p>
+      
+              <p>
+              I plan to be on academia job market mainly in U.S./China/Canada in fall/winter 2023.
+              </p>
+              <p style="text-align:center">
+		<a href="CV_tianxing.pdf">CV</a> &nbsp/&nbsp
+                <a href="mailto:goosehe@cs.washington.edu">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=egmfjjwAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://twitter.com/TianxingH">Twitter</a> 
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/photo_twodog.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/photo_twodog.png" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
+              <p>
+                My current research interest lies in identifying and mitigating the risk of deployment of large language models in real-world applications. Most of my works during my PhD is focused on neural language generation.
+ Representative papers are <span class="highlight">highlighted</span>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/blindspot.png' width="220">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2212.10020">
+                <papertitle>On the Blind Spots of Model-Based Evaluation Metrics for Text Generation</papertitle>
+              </a>
+              <br>
+              Tianxing He*, Jingyu Zhang*, Tianle Wang, Sachin Kumar, Kyunghyun Cho, James Glass, Yulia Tsvetkov
+
+              <br>
+							<em>ACL 2023</em>, <a href='slides/2023_12mintalk_blindspot.pdf'>selfcontained-oral-slide</a>
+              <br>
+              <p></p>
+              <p>
+              In this work, we explore a useful but often neglected methodology for robustness analysis of text generation evaluation metrics: stress tests with synthetic data. Basically, we design and synthesize a wide range of potential errors and check whether they result in a commensurate drop in the metric scores. Our experiments reveal interesting insensitivities, biases, or even loopholes in existing metrics. Further, we investigate the reasons behind these blind spots and suggest practical workarounds for a more reliable evaluation of text generation.
+              </p>
+            </td>
+          </tr> 
+
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/2022_pcfg_ctg.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2210.07431">
+                <papertitle>PCFG-based Natural Language Interface Improves Generalization for Controlled Text Generation</papertitle>
+              </a>
+              <br>
+              Jingyu Zhang, James Glass, Tianxing He
+              <br>
+	      <em>The 2022 Efficient Natural Language and Speech Processing Workshop (NeurIPS ENLSP 2022)</em>
+              <br>
+  	      <em>The Best Paper Award at the Workshop</em>
+              <p></p>
+              <p>
+              We propose a natural language (NL) interface for controlled text generation, where we craft a PCFG to embed the control attributes into natural language commands, and propose variants of existing CTG models that take commands as input.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/acl2022_focus.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2203.01146">
+                <papertitle>Controlling the Focus of Pretrained Language Generation Models</papertitle>
+              </a>
+              <br>
+              Jiabao Ji, Yoon Kim, James Glass, Tianxing He
+              <br>
+							<em>ACL-Findings 2022</em>
+              <br>
+              <p></p>
+              <p>
+              Different focus in the context leads to different generation! We develop the "focus vector" method to control the focus of a pretrained language model.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/emnlp2021_exposurebias.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1905.10617">
+                <papertitle>Exposure Bias versus Self-Recovery: Are Distortions Really Incremental for Autoregressive Text Generation?</papertitle>
+              </a>
+              <br>
+              Tianxing He, Jingzhao Zhang, Zhiming Zhou, James Glass
+              <br>
+							<em>EMNLP 2021</em>
+              <br>
+              <p></p>
+              <p>
+                By feeding the LM with different types of prefixes, we could assess how serious exposure bias is. Surprisingly, our experiments reveal that LM has the self-recovery ability, which we hypothesize  to be countering the harmful effects from exposure bias.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/eacl2021_jebm_calibration.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2101.06829">
+                <papertitle>Joint Energy-based Model Training for Better Calibrated Natural Language Understanding Models</papertitle>
+              </a>
+              <br>
+              Tianxing He, Bryan McCann, Caiming Xiong, Ehsan Hosseini-Asl
+              <br>
+							<em>EACL 2021</em>
+              <br>
+              <p></p>
+              <p>
+              We explore joint energy-based model (EBM) training during the finetuning of pretrained text encoders (e.g., Roberta) for natural language understanding (NLU) tasks. Our experiments show that EBM training can help the model reach a better calibration that is competitive to strong baselines, with little or no loss in accuracy.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/fewshot_lama.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2109.02772">
+                <papertitle>An Empirical Study on Few-shot Knowledge Probing for Pretrained Language Models</papertitle>
+              </a>
+              <br>
+              Tianxing He, Kyunghyun Cho, James Glass
+              <br>
+							<em>On Arxiv</em>
+              <br>
+              <p></p>
+              <p>
+              We compare a variety of approaches under a few-shot knowledge probing setting, where only a small number (e.g., 10 or 20) of example triples are available. In addition, we create a new dataset named TREx-2p, which contains 2-hop relations. 
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/eacl2021_forgetdialogue.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1910.07117">
+                <papertitle>Analyzing the Forgetting Problem in the Pretrain-Finetuning of Dialogue Response Models</papertitle>
+              </a>
+              <br>
+              Tianxing He, Jun Liu, Kyunghyun Cho, Myle Ott, Bing Liu, James Glass, Fuchun Peng
+              <br>
+							<em>EACL 2021</em>
+              <br>
+              <p></p>
+              <p>
+                After finetuning of pretrained NLG models, does the model forget some precious skills learned pretraining? We demonstrate the forgetting phenomenon through a set of detailed behavior analysis from the perspectives of knowledge transfer, context sensitivity, and function space projection.
+              </p>
+            </td>
+          </tr> 
+
+
+
+           <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/aacl2020_samplingcompare.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2009.07243">
+                <papertitle>A Systematic Characterization of Sampling Algorithms for Open-ended Language Generation</papertitle>
+              </a>
+              <br>
+              Moin Nadeem*, Tianxing He* (equal contribution), Kyunghyun Cho, James Glass
+              <br>
+							<em>AACL 2020</em>
+              <br>
+              <p></p>
+              <p>
+              We identify a few interesting properties that are shared among existing sampling algorithms for NLG. We design experiments to check whether these properties are crucial for the good performance.
+              </p>
+            </td>
+          </tr> 
+
+
+           <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/iclr2020_gradientclipping.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1905.11881">
+                <papertitle>Why Gradient Clipping Accelerates Training: A Theoretical Justification for Adaptivity</papertitle>
+              </a>
+              <br>
+              Jingzhao Zhang, Tianxing He, Suvrit Sra, Ali Jadbabaie
+              <br>
+	      <em>ICLR 2020</em>
+              <br>
+              <em>Reviewer Scores: 8/8/8</em>
+              <br>
+              <p></p>
+              <p>
+                We provide a theoretical explanation for the effectiveness of gradient clipping in training deep neural networks. The key ingredient is a new smoothness condition derived from practical neural network training examples.
+              </p>
+            </td>
+          </tr> 
+
+       
+
+          <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/acl2020_negativetraining.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1903.02134">
+                <papertitle>Negative Training for Neural Dialogue Response Generation</papertitle>
+              </a>
+              <br>
+              Tianxing He, James Glass
+              <br>
+	      <em>ACL 2020</em>
+              <br>
+              <p></p>
+              <p>
+                Can we "correct" some detected bad behaviors of a NLG model? We use negative examples to feed negative training signals to the model.
+              </p>
+            </td>
+          </tr> 
+
+           <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/autokg_example.png' width="200">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2008.08995?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529">
+                <papertitle>AutoKG: Constructing Virtual Knowledge Graphs from Unstructured Documents for Question Answering</papertitle>
+              </a>
+              <br>
+              Seunghak Yu, Tianxing He, James Glass
+              <br>
+							<em>Preprint</em>
+              <br>
+              <p></p>
+              <p>
+                We propose a novel framework to automatically construct a KG from unstructured documents that does not require external alignment.
+              </p>
+            </td>
+          </tr> 
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/icassl2020_lmadapt_keli.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="papers/20_lmadapt_keli.pdf">
+                <papertitle>An Empirical Study of Transformer-based Neural Language Model Adaptation</papertitle>
+              </a>
+              <br>
+              Ke Li, Zhe Liu, Tianxing He, Hongzhao Huang, Fuchun Peng, Daniel Povey, Sanjeev Khudanpur
+              <br>
+							<em>ICASSP 2020</em>
+              <br>
+              <p></p>
+              <p>
+                We propose a mixer of dynamically weighted LMs that are separately trained on source and target domains, aiming to improve simple linear interpolation with dynamic weighting.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/iclr2019_detectegregious.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1809.04113">
+                <papertitle>Detecting Egregious Responses in Neural Sequence-to-sequence Models</papertitle>
+              </a>
+              <br>
+              Tianxing He, James Glass
+              <br>
+							<em>ICLR 2019</em>
+              <br>
+              <p></p>
+              <p>
+                Can we trick dialogue response models to emit dirty words?
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/iscslp16_birnnlmnce.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1602.06064">
+                <papertitle>On Training Bi-directional Neural Network Language Model with Noise Contrastive Estimation</papertitle>
+              </a>
+              <br>
+              Tianxing He, Yu Zhang, Jasha Droppo, Kai Yu
+              <br>
+							<em>ISCSLP 2016</em>
+              <br>
+              <p></p>
+              <p>
+                We attempt to train a bi-directional RNNLM via noise contrastive estimation.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/icassp2016_lstmdnn.png' width="140">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="papers/16lstmdnn_icassp16.pdf">
+                <papertitle>Exploiting LSTM Structure in Deep Neural Networks for Speech Recognition</papertitle>
+              </a>
+              <br>
+              Tianxing He, Jasha Droppo
+              <br>
+							<em>ICASSP 2016</em>
+              <br>
+              <p></p>
+              <p>
+                We design a LSTM structure in the depth dimension, instead of its original use in time-step dimension.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/icassp2015_charembed.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="papers/15mrnnlm_icassp15.pdf">
+                <papertitle>Recurrent Neural Network Language Model with Structured Word Embeddings for Speech Recognition</papertitle>
+              </a>
+              <br>
+              Tianxing He, Xu Xiang, Yanmin Qian, Kai Yu
+              <br>
+							<em>ICASSP 2015</em>
+              <br>
+              <p></p>
+              <p>
+                We restructure word embeddings in a RNNLM to take advantage of its sub-units.
+              </p>
+            </td>
+          </tr> 
+
+
+          <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src='images/nodeprune_papericon.png' width="180">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="papers/14prundnn_icassp14.pdf">
+                <papertitle>Reshaping Deep Neural Network for Fast Decoding by Node-Pruning</papertitle>
+              </a>
+              <br>
+              Tianxing He, Yuchen Fan, Yanmin Qian, Tian Tan, Kai Yu
+              <br>
+							<em>ICASSP 2014</em>
+              <br>
+              <p></p>
+              <p>
+                We prune neurons of a DNN for faster inference.
+              </p>
+            </td>
+          </tr> 
+
+
+
+
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                 The design and code of this website is borrowed from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's site</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+scp images/2022_pcfg_ctg.png  cloudygoose@login.csail.mit.edu:/afs/csail.mit.edu/u/c/cloudygoose/public_html/images/
