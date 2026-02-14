@@ -20,7 +20,7 @@
               <p style="text-align:center">
                 <name>Tianxing He</name>
               </p>
-              I have joined THU-IIIS (also known as the Yao Class) as AP in Sep 2024. I also work part-time at Shanghai Qi Zhi Institute and Xiongan AI Institute. I will teach a undergraduate NLP course in Fall 2025.<br>
+              I have joined THU-IIIS (also known as the Yao Class) as AP in Sep 2024. I also work part-time at Shanghai Qi Zhi Institute and Xiongan AI Institute. I teach a undergraduate NLP course in fall and a undergraduate LLM course in spring, open to the Yao Class.<br>
 	      My research focus on AI safety and AI-driven simulation or gaming. <br>
 	      <br> Below are some recruitment calls in Chinese. <br>
 	      <a href='https://zhuanlan.zhihu.com/p/1891963811541521383'>(closed) 2025 IIIS PhD student recruitment (2026 entrance)</a>. <br>
@@ -36,6 +36,9 @@
                 I did my bachelor and master degree at Shanghai Jiao Tong University, and my research there was supervised by Prof. Kai Yu, who runs the <a href="https://speechlab.sjtu.edu.cn/"> SJTU SpeechLab</a>.
                 At SJTU I was in the ACM honored class.
               </p>
+              <p>
+                For the undergraduate NLP/LLM course I'm teaching, we have a list of staff-recommended papers <a href="nlp_papers.html">here</a>.
+              </p>
  
               
 	      
@@ -46,12 +49,15 @@
               -->
 
      
-             <p style="text-align:center">
-                <a href="mailto:hetianxing@mail.tsinghua.edu.cn">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=egmfjjwAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/TianxingH">Twitter</a> 
-              </p>
-            </td>
+            <p style="text-align:center">
+               <a href="mailto:hetianxing@mail.tsinghua.edu.cn">Email</a> &nbsp/&nbsp
+               <a href="https://scholar.google.com/citations?user=egmfjjwAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+               <a href="https://twitter.com/TianxingH">Twitter</a> 
+             </p>
+             
+             
+             
+           </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
               <a href="images/photo_gif.gif"><img style="width:100%;max-width:100%" alt="profile photo" src="images/photo_gif.gif" class="hoverZoomLink"></a>
             </td>
@@ -68,8 +74,63 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+          <tr>
+            <td style="padding:40px;width:25%;vertical-align:middle">
+                  <img src='images/2026_editattack.png' width="220">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2602.10134">
+                <papertitle>Reverse-Engineering Model Editing on Language Models</papertitle>
+              </a>
+              <br>
+              Zhiyu Sun*, Minrui Luo*, Yu Wang, Zhili Chen, Tianxing He
+              <br>
+							<em>arxiv</em>
+              <br>
+              <p></p>
+              <p>
+                We propose KSTER, a two-stage attack that exposes a critical side-channel vulnerability in model editing. We leverage the low-rank structure of parameter updates to accurately recover the edited subjects and their contexts. Our experiments demonstrate high success rates across multiple LLMs. Further, we suggest a subspace camouflage defense to effectively mitigate these privacy risks.
+	      </p>
+            </td>
+         </tr> 
 
-	<tr bgcolor="#ffffd0">
+          <tr>
+            <td style="padding:10px;width:25%;vertical-align:middle">
+                  <img src='images/2026_virtualcrime.png' width="280">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2601.13981">
+                <papertitle>VirtualCrime: Evaluating Criminal Potential of Large Language Models via Sandbox Simulation</papertitle>
+              </a>
+              <br>
+              Yilin Tang*, Yu Wang*, Lanlan Qiu, Wenchang Gao, Yunfei Ma, Baicheng Chen, Tianxing He
+              <br>
+							<em>arxiv</em>
+              <br>
+              <p></p>
+              <p>
+              We propose VirtualCrime, a sandbox simulation framework utilizing a three-agent system to evaluate the criminal capabilities of LLMs. Through 40 diverse tasks, we assess the models' proficiency in planning and executing crimes. Our experiments reveal that agents often succeed in these criminal tasks, highlighting the need for safety alignment when deploying agentic AI in real-world settings.
+	      </p>
+            </td>
+         </tr> 
+
+          <tr>
+            <td style="padding:40px;width:25%;vertical-align:middle">
+                  <img src='images/2025_pay.png' width="220">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2511.00847">
+                <papertitle>Pay for The Second-Best Service: A Game-Theoretic Approach Against Dishonest LLM Providers</papertitle>
+              </a>
+              <br>
+              Yuhan Cao*, Yu Wang*, Sitong Liu, Miao Li, Yixin Tao, Tianxing He
+              <br>
+							<em>WWW 2026</em>
+              <br>
+              <p></p>
+              <p>
+                We present a game-theoretic approach to mitigate dishonest manipulation of LLM providers. We propose an economic model for a user-provider ecosystem, where a user iteratively delegates queries to multiple providers, and providers may manipulate outcomes to increase their billing. We propose an approximately incentive-compatible mechanism that guarantees a second-best user utility. We also prove an impossibility result, stating that no mechanism is asymptotically better than our mechanism. Simulation experiments with real-world API settings demonstrate the framework's effectiveness.	<tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
                   <img src='images/simcity.png' width="220">
             </td>
@@ -90,13 +151,14 @@
          </tr> 
 
 
-	  <tr bgcolor="#ffffd0">
+	  <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
                   <img src='images/aicrypto.png' width="220">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2507.09580">
-                <papertitle>AICrypto: A Comprehensive Benchmark For Evaluating Cryptography Capabilities of Large Language Models</papertitle>
+                <papertitle>AICrypto: Evaluating Cryptography Capabilities of Large Language Models
+                </papertitle>
               </a>
               <br>
               Yu Wang*, Yijian Liu*, Liheng Ji*, Han Luo*, Wenjie Li*, Xiaofei Zhou, Chiyun Feng, Puji Wang, Yuhan Cao, Geyuan Zhang, Xiaojian Li, Rongwu Xu, Yilei Chen, Tianxing He
@@ -105,7 +167,7 @@
               <br>
               <p></p>
               <p>
-	      We evaluate and show that LLM is pretty good at undergraduate-level crypto. The benchmark comprises 135 multiple-choice questions, 150 capture-the-flag (CTF) challenges, and 18 proof problems, covering a broad range of skills from factual memorization to vulnerability exploitation and formal reasoning. All tasks are carefully reviewed or constructed by cryptography experts (huge thanks to Prof.Chen) to ensure correctness and rigor. 
+	      We evaluate and show that LLM is pretty good at undergraduate-level crypto. The benchmark comprises 135 multiple-choice questions, 150 capture-the-flag (CTF) challenges, and 30 proof problems, covering a broad range of skills from factual memorization to vulnerability exploitation and formal reasoning. All tasks are carefully reviewed or constructed by cryptography experts (huge thanks to Prof.Chen) to ensure correctness and rigor. 
 	      </p>
             </td>
          </tr> 
@@ -145,7 +207,7 @@
           </tr> 
 
 
-	<tr bgcolor="#ffffd0">
+	<tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/miniagentpro.png' width="250">
             </td>
@@ -164,7 +226,7 @@
           </tr> 
 
 
-	 <tr>
+	 <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/tcgbench.png' width="220">
             </td>
@@ -182,7 +244,7 @@
 	      We construct TCGBench, a Benchmark for (LLM generation of) Test Case Generators. This benchmark comprises two tasks, aimed at studying the capabilities of LLMs in (1) generating valid test case generators for a given CP problem, and further (2) generating targeted test case generators that expose bugs in human-written code. Experimental results indicate that while state-of-the-art LLMs can generate valid test case generators in most cases, most LLMs struggle to generate targeted test cases that reveal flaws in human code effectively. 
 	      </p>
             </td>
-         </tr> 
+         </tr>  -->
 
 
 	 <tr>
@@ -207,7 +269,7 @@
 
 
 
-	  <tr bgcolor="#ffffd0">
+	  <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/2025_vacsim.png' width="220">
             </td>
@@ -331,7 +393,7 @@
           </tr> 
 
         
-         <tr bgcolor="#ffffd0">
+         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/blindspot.png' width="220">
             </td>
@@ -353,7 +415,7 @@
           </tr> 
 
 
-            <tr bgcolor="#ffffd0">
+            <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/semstamp.jpg' width="220">
             </td>
@@ -374,7 +436,7 @@
           </tr> 
 
 
-          <tr bgcolor="#ffffd0">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/latticegen.jpg' width="220">
             </td>
@@ -393,7 +455,7 @@
 	      </p>
             </td>
           </tr> 
-
+<!-- 
          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/2024_kss.jpg' width="220">
@@ -412,10 +474,10 @@
               We propose k-SemStamp, a simple yet effective enhancement of SemStamp, utilizing k-means clustering as an alternative of LSH to partition the embedding space with awareness of inherent semantic structure. 
               </p>
             </td>
-          </tr> 
+          </tr>  -->
 
 
-          <tr>
+          <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/iclr2024_knowledgecard.png' width="200">
             </td>
@@ -435,7 +497,7 @@
               We propose Knowledge Card, a community-driven initiative to empower black-box LLMs with modular and collaborative knowledge. By incorporating the outputs of independently trained, small, and specialized LMs, we make LLMs better knowledge models by empowering them with temporal knowledge update, multi-domain knowledge synthesis, and continued improvement through collective efforts.
               </p>
             </td>
-          </tr> 
+          </tr>  -->
 
 
           <tr>
@@ -479,7 +541,7 @@
           </tr> 
 
 
-          <tr>
+          <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/neurips2023_neuron.png' width="200">
             </td>
@@ -497,7 +559,7 @@
               We use implicit dynamical models to learn time-invariant representation for individual neurons from population dynamics and enable mapping functional activity to cell types.
 	      </p>
             </td>
-          </tr> 
+          </tr>  -->
 
 
 
@@ -547,7 +609,7 @@
           </tr> 
 
 
-          <tr bgcolor="#ffffd0">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/emnlp2021_exposurebias.png' width="200">
             </td>
@@ -589,7 +651,7 @@
           </tr> 
 
 
-          <tr>
+          <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/fewshot_lama.png' width="200">
             </td>
@@ -607,7 +669,7 @@
               We compare a variety of approaches under a few-shot knowledge probing setting, where only a small number (e.g., 10 or 20) of example triples are available. In addition, we create a new dataset named TREx-2p, which contains 2-hop relations. 
               </p>
             </td>
-          </tr> 
+          </tr>  -->
 
 
           <tr>
@@ -632,7 +694,7 @@
 
 
 
-           <tr bgcolor="#ffffd0">
+           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/aacl2020_samplingcompare.png' width="180">
             </td>
@@ -677,7 +739,7 @@
 
        
 
-          <tr bgcolor="#ffffd0">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/acl2020_negativetraining.png' width="200">
             </td>
@@ -697,7 +759,7 @@
             </td>
           </tr> 
 
-           <tr>
+           <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/autokg_example.png' width="200">
             </td>
@@ -715,7 +777,7 @@
                 We propose a novel framework to automatically construct a KG from unstructured documents that does not require external alignment.
               </p>
             </td>
-          </tr> 
+          </tr>  -->
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -801,7 +863,7 @@
           </tr> 
 
 
-          <tr>
+          <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/icassp2015_charembed.png' width="180">
             </td>
@@ -819,10 +881,10 @@
                 We restructure word embeddings in a RNNLM to take advantage of its sub-units.
               </p>
             </td>
-          </tr> 
+          </tr>  -->
 
 
-          <tr bgcolor="#ffffd0">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
                   <img src='images/nodeprune_papericon.png' width="180">
             </td>
