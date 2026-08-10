@@ -20,7 +20,7 @@
               <p style="text-align:center">
                 <name>Tianxing He</name>
               </p>
-              I have joined THU-IIIS (also known as the Yao Class) as AP in Sep 2024. I also work part-time at Shanghai Qi Zhi Institute and Xiongan AI Institute. I teach a undergraduate NLP course in fall and a undergraduate LLM course in spring, open to the Yao Class.<br>
+              I have joined THU-IIIS (also known as the Yao Class) as AP in Sep 2024. I also work part-time at Shanghai Qi Zhi Institute and Xiongan AI Institute. I have just founded a start-up in Xiong'an doing for video game development.<br>
 	      My research focus on video game development, multi-modal generation, society simulation, and AI safety. <br>
 	      <br> Below are some recruitment calls in Chinese. <br>
 	      <a href='https://zhuanlan.zhihu.com/p/2032428075510665463'>2026 IIIS PhD student recruitment (2027 entrance)</a> (closed). <br>
@@ -60,7 +60,7 @@
              
            </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/photo_gif.gif"><img style="width:100%;max-width:100%" alt="profile photo" src="images/photo_gif.gif" class="hoverZoomLink"></a>
+              <a id="profile-image-link" href="images/photo_gif.gif"><img id="profile-image" style="width:100%;max-width:100%;aspect-ratio:1;object-fit:contain" alt="profile photo" src="images/photo_gif.gif" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -78,6 +78,57 @@
         
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
+                  <img src='images/2026_animal_city_memories.png' width="220" alt="动物城往事 logo">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>动物城往事</papertitle>
+              <br>
+              <a href="https://www.bilibili.com/video/BV1G93T6zEC7">Trailer</a>
+              <br>
+              <p></p>
+              <p>
+                To be announced on Steam.
+	      </p>
+            </td>
+         </tr>
+
+	 <tr>
+            <td style="padding:20px 60px;width:25%;vertical-align:middle">
+                  <img src='images/iiis_aisafety_lunch.png' width="120">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>IIIS AI Safety Lunch</papertitle>
+              <br>
+              <br>
+              <p></p>
+              <p>
+              We do a monthly lunch with the topic of AI safety, at the FIT Building, Tsinghua, Beijing. Two students will present in each lunch. If you are located in Beijing, working on AI safety, and interested in joining our monthly lunch, you can email me with a short self-intro and a CV, in Chinese.
+	      </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:40px;width:25%;vertical-align:middle">
+                  <img src='images/2026_simpref.png' width="220">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2607.14485">
+                <papertitle>Step-Level Preference Learning for Generative Agents in Social Simulations</papertitle>
+              </a>
+              <br>
+              Wenchang Gao, Pingyue Sheng, Lanlan Qiu, Yunfei Ma, Jian Zhao, Baicheng Chen, Kangda Wang, Yuyang Tian, Shunqiang Mao, Tianxing He
+              <br>
+							<em>WAICA 2026</em>
+              <br>
+              <p></p>
+              <p>
+                We introduce SimPref, an interactive interface for collecting step-level human preferences over intermediate decisions in generative-agent social simulations. The resulting dataset contains 57,239 preference pairs across six agent modules and 30 social events. Training open-weight LLMs with SFT and DPO on this data improves simulation fidelity, coordination, and interaction quality, showing that fine-grained human supervision can improve both local decisions and long-horizon behavior.
+	      </p>
+            </td>
+         </tr>
+
+          <tr>
+            <td style="padding:40px;width:25%;vertical-align:middle">
                   <img src='images/2026_dlm_arm.png' width="220">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -87,7 +138,7 @@
               <br>
               Zeyang Zhang*, Chengwei Liang*, Xingyan Chen*, Meiqi Gu*, Minrui Luo, Jingzhao Zhang, Tianxing He
               <br>
-							<em>arxiv</em>
+							<em>COLM 2026</em>
               <br>
               <p></p>
               <p>
@@ -127,7 +178,7 @@
               <br>
               Baicheng Chen*, Yu Wang*, Ziheng Zhou*, Xiangru Liu, Juanru Li, Yilei Chen, Tianxing He
               <br>
-							<em>arxiv</em>
+							<em>COLM 2026</em>
               <br>
               <p></p>
               <p>
@@ -250,22 +301,6 @@
 	      </p>
             </td>
          </tr> 
-
-	 <tr>
-            <td style="padding:20px 60px;width:25%;vertical-align:middle">
-                  <img src='images/iiis_aisafety_lunch.png' width="120">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>IIIS AI Safety Lunch</papertitle>
-              <br>
-              <br>
-              <p></p>
-              <p>
-              We do a monthly lunch with the topic of AI safety, at the FIT Building, Tsinghua, Beijing. The first one in the fall semester will be at Sep 05, in Chinese language. Two students will present in each lunch. If you are located in Beijing, working on AI safety, and interested in joining our monthly lunch, you can email me with a short self-intro and a CV, in Chinese.
-	      </p>
-            </td>
-          </tr> 
-
 
 	 <tr>
             <td style="padding:20px 60px;width:25%;vertical-align:middle">
@@ -1003,6 +1038,28 @@
       </td>
     </tr>
   </table>
+  <script>
+    const profileImages = [
+      { src: "images/photo_gif.gif", alt: "profile photo", duration: 15000 },
+      { src: "images/profile_zhie_technology_xiongan.jpg", alt: "Zhi'e Technology Xiong'an logo", duration: 3000 },
+      { src: "images/profile_zhie_group_guidelines.png", alt: "Zhi'e group guidelines", duration: 3000 },
+      { src: "images/profile_shenma_research_group.jpg", alt: "research group logo", duration: 3000 }
+    ];
+    const profileImage = document.getElementById("profile-image");
+    const profileImageLink = document.getElementById("profile-image-link");
+    let profileImageIndex = 0;
+
+    function showNextProfileImage() {
+      profileImageIndex = (profileImageIndex + 1) % profileImages.length;
+      const nextImage = profileImages[profileImageIndex];
+      profileImage.src = nextImage.src;
+      profileImage.alt = nextImage.alt;
+      profileImageLink.href = nextImage.src;
+      window.setTimeout(showNextProfileImage, nextImage.duration);
+    }
+
+    window.setTimeout(showNextProfileImage, profileImages[0].duration);
+  </script>
 </body>
 
 </html>
