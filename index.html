@@ -20,6 +20,8 @@
     .project-table td { overflow-wrap: anywhere; }
     .project-table td:first-child { width: 25%; }
     .project-table img { max-width: 100%; height: auto; }
+    /* Use the wider historical image area without shifting the shared text column. */
+    #research-papers .wide-paper-thumbnail { width: 280px; max-width: calc(100% + 60px); margin-left: -30px; }
     #indie-projects .project-table td { padding: 24px 20px; vertical-align: middle; }
     #indie-projects .project-table td:first-child { text-align: center; }
     @media (max-width: 600px) {
@@ -33,6 +35,7 @@
       .project-table > tbody > tr > td { display: block; width: auto !important; padding: 12px !important; }
       .project-table > tbody > tr > td:first-child { text-align: center; }
       .project-table img { max-height: 200px; width: auto; max-width: 100%; object-fit: contain; }
+      #research-papers .wide-paper-thumbnail { max-width: 100%; margin-left: 0; }
     }
     .project-table .video-thumbnail, .project-table .squash-thumbnail { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto; }
     .project-table .squash-thumbnail { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #bba9d1; }
@@ -103,7 +106,7 @@
         <table class="project-table"><tbody>
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-              <img src="images/2026_rmcw.png" width="220" alt="Overview of RMCW watermark generation and detection">
+              <img class="wide-paper-thumbnail" src="images/2026_rmcw.png" width="280" alt="Overview of RMCW watermark generation and detection">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2610.02817">
@@ -122,7 +125,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_simpref.png' width="220">
+                  <img class="wide-paper-thumbnail" src='images/2026_simpref.png' width="280">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2607.14485">
@@ -142,7 +145,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-              <img src="images/2026_patcher.png" width="220" alt="Patcher compared with traditional adversarial training">
+              <img class="wide-paper-thumbnail" src="images/2026_patcher.png" width="280" alt="Patcher compared with traditional adversarial training">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2606.07970">
@@ -181,7 +184,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_algo_reinvention.png' width="220" alt="Unlearning and recovery pipeline for foundational algorithms">
+                  <img class="wide-paper-thumbnail" src='images/2026_algo_reinvention.png' width="280" alt="Unlearning and recovery pipeline for foundational algorithms">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2604.05716">
@@ -201,7 +204,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_CREbench.png' width="220">
+                  <img class="wide-paper-thumbnail" src='images/2026_CREbench.png' width="280">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2604.03750">
@@ -221,7 +224,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_editattack.png' width="220">
+                  <img class="wide-paper-thumbnail" src='images/2026_editattack.png' width="280">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2602.10134">
