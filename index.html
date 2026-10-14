@@ -8,13 +8,43 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/head_icon_htx.png"> 
+  <style>
+    .project-tabs { display: flex; gap: 28px; margin: 20px; border-bottom: 1px solid #ddd; }
+    .project-tabs button { padding: 12px 0; border: 0; border-bottom: 2px solid transparent; background: none; color: #555; font: 20px/1.4 'Lato', Verdana, Helvetica, sans-serif; text-align: left; cursor: pointer; }
+    .project-tabs button[aria-selected="true"] { color: #1772d0; border-bottom-color: #1772d0; }
+    .project-tabs button:hover { color: #1772d0; }
+    .project-tabs button:focus-visible { outline: 2px solid #1772d0; outline-offset: 4px; }
+    .project-panel[hidden] { display: none; }
+    .project-note { margin: 0 20px 12px; }
+    .project-table { width: 100%; border: 0; border-spacing: 0; table-layout: fixed; }
+    .project-table td { overflow-wrap: anywhere; }
+    .project-table td:first-child { width: 25%; }
+    .project-table img { max-width: 100%; height: auto; }
+    #indie-projects .project-table td { padding: 24px 20px; vertical-align: middle; }
+    #indie-projects .project-table td:first-child { text-align: center; }
+    @media (max-width: 600px) {
+      .profile-table > tbody > tr > td { display: block; width: auto !important; max-width: none !important; }
+      .profile-table > tbody > tr > td:last-child { width: 200px !important; margin: 0 auto; }
+      .project-tabs { gap: 16px; margin: 20px 12px; }
+      .project-tabs button { font-size: 16px; flex: 1; min-width: 0; }
+      .project-tabs button:last-child { flex: 2; }
+      .project-note { margin-left: 12px; margin-right: 12px; }
+      .project-table > tbody > tr { display: block; margin-bottom: 24px; }
+      .project-table > tbody > tr > td { display: block; width: auto !important; padding: 12px !important; }
+      .project-table > tbody > tr > td:first-child { text-align: center; }
+      .project-table img { max-height: 200px; width: auto; max-width: 100%; object-fit: contain; }
+    }
+    .project-table .video-thumbnail, .project-table .squash-thumbnail { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto; }
+    .project-table .squash-thumbnail { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #bba9d1; }
+    .project-table .squash-thumbnail img { position: absolute; bottom: 0; left: 12.5%; width: 75%; height: auto; max-height: none; }
+  </style>
 </head>
 
 <body>
-  <table style="width:160%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="profile-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
@@ -64,49 +94,13 @@
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Selected Research or Video Game Projects</heading>
-              <p>
-                Listed below. * means co-first-author.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        
-          <tr>
-            <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_animal_city_memories.png' width="220" alt="Tales from the Animal City logo">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>[Video Game Demo] Tales from the Animal City</papertitle>
-              <ul style="padding-left:1em;">
-                <li>[2026-07-25] <a href="https://www.bilibili.com/video/BV1G93T6zEC7">Devlog #1</a></li>
-                <li>[2026-09-23] <a href="https://mp.weixin.qq.com/s/P7ccR1f3gxWCZ9XMak0k0Q">Behind the Scenes of a Cozy City Builder! Tales from the Animal City Devlog</a></li>
-              </ul>
-              <p>
-                To be announced on Steam.
-	      </p>
-            </td>
-         </tr>
-
-	 <tr>
-            <td style="padding:20px 60px;width:25%;vertical-align:middle">
-                  <a href="ai_safety_lunch.html"><img src='images/iiis_aisafety_lunch.png' width="120" alt="IIIS AI Safety Lunch"></a>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="ai_safety_lunch.html"><papertitle>IIIS AI Safety Lunch</papertitle></a>
-              <br>
-              <br>
-              <p></p>
-              <p>
-              We do a monthly lunch with the topic of AI safety, at the FIT Building, Tsinghua, Beijing. Two students will present in each lunch. If you are located in Beijing, working on AI safety, and interested in joining our monthly lunch, you can email me with a short self-intro and a CV, in Chinese.
-	      </p>
-            </td>
-          </tr>
-
+        <div class="project-tabs" role="tablist" aria-label="Projects">
+          <button type="button" id="research-tab" role="tab" aria-selected="true" aria-controls="research-papers">Research Papers</button>
+          <button type="button" id="indie-tab" role="tab" aria-selected="false" aria-controls="indie-projects" tabindex="-1">Indie Games, Organized Events, and Tutorials</button>
+        </div>
+        <section class="project-panel" id="research-papers" role="tabpanel" aria-labelledby="research-tab" tabindex="0">
+          <p class="project-note">* indicates co-first authorship.</p>
+        <table class="project-table"><tbody>
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
               <img src="images/2026_rmcw.png" width="220" alt="Overview of RMCW watermark generation and detection">
@@ -187,7 +181,7 @@
 
           <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_algo_reinvention.png' width="220">
+                  <img src='images/2026_algo_reinvention.png' width="220" alt="Unlearning and recovery pipeline for foundational algorithms">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2604.05716">
@@ -200,7 +194,7 @@
               <br>
               <p></p>
               <p>
-                We propose an Unlearn-and-Reinvent pipeline to test whether LLMs can reinvent foundational algorithms after unlearning them. Across 10 algorithms, 3 models, and 3 hint levels, the strongest model reinvents 50% with no hint, 70% with high-level hints, and 90% with step-by-step hints, while test-time reinforcement learning enables success on harder cases. Our analyses reveal that a generative verifier is critical to preventing "thought collapse" during reinvention.
+                We study whether LLMs can reinvent foundational algorithms by using unlearning to suppress direct recall of a target algorithm, then testing whether models can recover it. Although unlearning does not guarantee complete knowledge removal, nearly half of the 20 target algorithms remain unrecovered without hints. Even suppressing algorithm names during decoding, without unlearning, substantially reduces recovery rates, suggesting a strong reliance on memorized knowledge. A generative verifier helps sustain reasoning and mitigate "thought collapse." Treating recovery rates after unlearning as an approximate upper bound, our results suggest that current LLMs have limited capacity for foundational algorithmic innovation.
 	      </p>
             </td>
          </tr> 
@@ -221,24 +215,6 @@
               <p></p>
               <p>
                 We introduce CREBench, a benchmark of 432 cryptographic binary reverse engineering challenges built from 48 standard algorithms, 3 insecure key usage scenarios, and 3 difficulty levels. Each challenge requires the model to analyze cryptographic logic and recover the correct input in a CTF-style setting. Evaluating eight frontier LLMs, we find the best model (GPT-5.4) scores 64.03/100 and recovers the flag in 59% of challenges. We also establish a strong human expert baseline of 92.19 points, showing that humans maintain an advantage in cryptographic RE tasks.
-	      </p>
-            </td>
-         </tr> 
-
-          <tr>
-            <td style="padding:40px;width:25%;vertical-align:middle">
-                  <img src='images/2026_littlewitchgarden.png' width="220">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://github.com/MajestyHenius/LittleWitchGarden">
-                <papertitle>[Video Game Demo] Little Witch Garden</papertitle>
-              </a>
-              <br>
-              Tianxing He (Project Lead & Director); Lanlan Qiu (Game Designer); Henius (Game Developer); Peipei, Limiao, Liying (Artist); Henius, Kangda (Animator)
-              <br>
-              <p></p>
-              <p>
-                Little Witch Garden is a roguelike card-based auto-battler built with the Unity engine. Set in a garden affected by a dark curse, the game features battles fought alongside three witches and emphasizes run-based decision-making. Its core gameplay combines auto-battler combat, card collection, and persistent unlock progression across runs. We have released it on github and you are welcome to have a try!
 	      </p>
             </td>
          </tr> 
@@ -298,7 +274,11 @@
               <br>
               <p></p>
               <p>
-                We present a game-theoretic approach to mitigate dishonest manipulation of LLM providers. We propose an economic model for a user-provider ecosystem, where a user iteratively delegates queries to multiple providers, and providers may manipulate outcomes to increase their billing. We propose an approximately incentive-compatible mechanism that guarantees a second-best user utility. We also prove an impossibility result, stating that no mechanism is asymptotically better than our mechanism. Simulation experiments with real-world API settings demonstrate the framework's effectiveness.	<tr>
+                We present a game-theoretic approach to mitigate dishonest manipulation of LLM providers. We propose an economic model for a user-provider ecosystem, where a user iteratively delegates queries to multiple providers, and providers may manipulate outcomes to increase their billing. We propose an approximately incentive-compatible mechanism that guarantees a second-best user utility. We also prove an impossibility result, stating that no mechanism is asymptotically better than our mechanism. Simulation experiments with real-world API settings demonstrate the framework's effectiveness.
+              </p>
+            </td>
+          </tr>
+          <tr>
             <td style="padding:40px;width:25%;vertical-align:middle">
                   <img src='images/simcity.png' width="220">
             </td>
@@ -1062,6 +1042,59 @@
 
 
         </tbody></table>
+        </section>
+
+        <section class="project-panel" id="indie-projects" role="tabpanel" aria-labelledby="indie-tab" tabindex="0" hidden>
+          <table class="project-table"><tbody>
+            <tr>
+              <td><img src="images/2026_animal_city_memories.png" width="220" alt="Tales from the Animal City logo"></td>
+              <td>
+                <papertitle>[Video Game Demo] Tales from the Animal City</papertitle>
+                <ul style="padding-left:1em;">
+                  <li>[2026-07-25] <a href="https://www.bilibili.com/video/BV1G93T6zEC7">Devlog #1</a></li>
+                  <li>[2026-09-23] <a href="https://mp.weixin.qq.com/s/P7ccR1f3gxWCZ9XMak0k0Q">Behind the Scenes of a Cozy City Builder! Tales from the Animal City Devlog</a></li>
+                </ul>
+                <p>To be announced on Steam.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="ai_safety_lunch.html"><img src="images/iiis_aisafety_lunch.png" width="120" alt="IIIS AI Safety Lunch"></a></td>
+              <td>
+                <a href="ai_safety_lunch.html"><papertitle>IIIS AI Safety Lunch</papertitle></a>
+                <p>We organize a monthly lunch on AI safety at the FIT Building, Tsinghua University, Beijing. Two students usually present at each lunch. If you are based in Beijing, work on AI safety, and would like to join, please email me with a brief introduction and a CV. You are welcome to write in Chinese.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="squash-thumbnail"><img src="images/iiis_squash.jpg" alt="IIIS Squash logo"></span></td>
+              <td>
+                <papertitle>IIIS Squash</papertitle>
+                <p>I organize weekly squash sessions at Tsinghua University.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="video-thumbnail" width="220" src="images/spine_tutorial.jpg" alt="Spine animation tutorial thumbnail"></td>
+              <td>
+                <a href="https://www.bilibili.com/video/BV1NFuc6vEnJ/"><papertitle>Spine Tutorial</papertitle></a>
+                <p>A tutorial on creating 2D animations with Spine.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="video-thumbnail" width="220" src="images/xiongan_vlog.jpg" alt="Xiongan weekend vlog thumbnail"></td>
+              <td>
+                <a href="https://www.bilibili.com/video/BV1zxK16yERK/"><papertitle>Xiongan Vlog</papertitle></a>
+                <p>A weekend outing in Xiongan.</p>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/2026_littlewitchgarden.png" width="220" alt="Little Witch Garden game preview"></td>
+              <td>
+                <a href="https://github.com/MajestyHenius/LittleWitchGarden"><papertitle>[Video Game Demo] Little Witch Garden</papertitle></a>
+                <p>Tianxing He (Project Lead &amp; Director); Lanlan Qiu (Game Designer); Henius (Game Developer); Peipei, Limiao, Liying (Artists); Henius, Kangda (Animators)</p>
+                <p>Little Witch Garden is a roguelike card-based auto-battler built with the Unity engine. Set in a garden affected by a dark curse, the game features battles fought alongside three witches and emphasizes run-based decision-making. Its core gameplay combines auto-battler combat, card collection, and persistent unlock progression across runs. We have released it on GitHub, and you are welcome to try it!</p>
+              </td>
+            </tr>
+          </tbody></table>
+        </section>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
@@ -1077,6 +1110,32 @@
     </tr>
   </table>
   <script>
+    const projectTabs = [...document.querySelectorAll('.project-tabs [role="tab"]')];
+
+    function selectProjectTab(selectedTab) {
+      projectTabs.forEach(tab => {
+        const selected = tab === selectedTab;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+      });
+    }
+
+    projectTabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectProjectTab(tab));
+      tab.addEventListener('keydown', event => {
+        let nextIndex;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % projectTabs.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + projectTabs.length) % projectTabs.length;
+        else if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = projectTabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectProjectTab(projectTabs[nextIndex]);
+        projectTabs[nextIndex].focus();
+      });
+    });
+
     const profileImages = [
       { src: "images/photo_gif.gif", alt: "profile photo", duration: 15000 },
       { src: "images/profile_zhie_technology_xiongan.jpg", alt: "Zhi'e Technology Xiong'an logo", duration: 3000 },
