@@ -13,7 +13,7 @@ const { chromium } = require('playwright');
     const home = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
     const expectedProjects = [
       '[Video Game Demo] Tales from the Animal City', 'IIIS AI Safety Lunch',
-      'IIIS Squash', 'Spine Tutorial', 'Xiongan Vlog',
+      'Yao Class Jike 62', 'IIIS Squash', 'Spine Tutorial', 'Xiongan Vlog',
       '[Video Game Demo] Little Witch Garden'
     ];
     for (const width of [1280, 768, 390, 320]) {
@@ -23,7 +23,8 @@ const { chromium } = require('playwright');
       const indie = page.locator('#indie-tab');
       assert.equal(await research.getAttribute('aria-selected'), 'true');
       assert.equal(await page.locator('#indie-projects').isVisible(), false);
-      assert.equal(await page.locator('#research-papers papertitle').count(), 38);
+      assert.equal(await page.locator('#research-papers papertitle').count(), 39);
+      assert.equal(await page.locator('#research-papers papertitle').first().textContent(), 'Self-Conditioning Enables Deep Sequential Reasoning in Flow Matching');
       await indie.click();
       assert.equal(await indie.getAttribute('aria-selected'), 'true');
       assert.equal(await page.locator('#research-papers').isVisible(), false);
