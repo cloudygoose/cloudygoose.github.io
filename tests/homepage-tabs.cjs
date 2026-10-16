@@ -13,7 +13,7 @@ const { chromium } = require('playwright');
     const home = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
     const expectedProjects = [
       '[Video Game Demo] Tales from the Animal City', 'IIIS AI Safety Lunch',
-      'Yao Class Jike 62', 'IIIS Squash', 'Spine Tutorial', 'Xiongan Vlog',
+      'Yao Class Jike 62', 'IIIS Squash', 'Blender Tutorial', 'Spine Tutorial', 'Xiongan Vlog',
       '[Video Game Demo] Little Witch Garden'
     ];
     for (const width of [1280, 768, 390, 320]) {
@@ -30,6 +30,7 @@ const { chromium } = require('playwright');
       assert.equal(await page.locator('#research-papers').isVisible(), false);
       assert.deepEqual(await page.locator('#indie-projects papertitle').allTextContents(), expectedProjects);
       assert.equal(await page.locator('#indie-projects tr').filter({ hasText: 'IIIS Squash' }).locator('a').count(), 0);
+      assert.equal(await page.getByRole('link', { name: 'Blender Tutorial', exact: true }).getAttribute('href'), 'https://www.bilibili.com/video/BV1JtJX6YESb/');
       assert.equal(await page.getByRole('link', { name: 'Spine Tutorial', exact: true }).getAttribute('href'), 'https://www.bilibili.com/video/BV1NFuc6vEnJ/');
       assert.equal(await page.getByRole('link', { name: 'Xiongan Vlog', exact: true }).getAttribute('href'), 'https://www.bilibili.com/video/BV1zxK16yERK/');
       for (const tab of [research, indie]) {
